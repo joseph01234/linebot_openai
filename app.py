@@ -53,8 +53,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '坐殺博徒' in text:
         message =  VideoSendMessage(
-            original_content_url='https://memeprod.ap-south-1.linodeobjects.com/user-maker-thumbnail/120dc96e75b25c107485a60f21d5efb1.gif',
-            preview_image_url='https://memeprod.ap-south-1.linodeobjects.com/user-maker-thumbnail/120dc96e75b25c107485a60f21d5efb1.gif'
+            original_content_url='https://imgur.com/gallery/gBDAYiG',
+            preview_image_url='https://imgur.com/gallery/gBDAYiG'
         )
         line_bot_api.reply_message(event.reply_token, message)
     elif '無量空處' in text:
