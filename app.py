@@ -8,6 +8,8 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+import os
+
 app = Flask(__name__)
 
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
