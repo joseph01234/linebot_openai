@@ -51,6 +51,12 @@ def handle_message(event):
         output_text ='林明杰'
         message = TextSendMessage(text=output_text)
         line_bot_api.reply_message(event.reply_token, message)
+     elif'坐殺博徒'in text:
+         message = VideoSendMessage(
+            original_content_url='https://memeprod.ap-south-1.linodeobjects.com/user-maker-thumbnail/120dc96e75b25c107485a60f21d5efb1.gif',
+            preview_image_url='https://memeprod.ap-south-1.linodeobjects.com/user-maker-thumbnail/120dc96e75b25c107485a60f21d5efb1.gif'
+         )
+          line_bot_api.reply_message(event.reply_token, message)
     else:
         # 用户输入不包含“組員”的情况，直接回复用户输入的文本
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text))
