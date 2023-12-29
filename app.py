@@ -40,7 +40,7 @@ def handle_message(event):
     text = event.message.text
     if '組員'in text:  
         # 用户输入包含“組員”的情况
-        output_text = '409410510 游家碩 /n 409411021 馬儒彬/n 409411054 周庭蔚'
+        output_text = '409410510 游家碩\n409411021 馬儒彬\n409411054 周庭蔚'
         message = TextSendMessage(text=output_text)
         line_bot_api.reply_message(event.reply_token, message)
     else:
