@@ -35,8 +35,12 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text)
-    line_bot_api.reply_message(event.reply_token, message)
+    text = event.message.text
+    if "組員" in text:  # 检查用户输入的文本中是否包含关键字“組員”
+        output_text = "409410510 游家碩 409411021 馬儒彬 409411054 周庭蔚"  # 定义输出文本
+        message = TextSendMessage(text=output_text)
+        line_bot_api.reply_message(event.reply_token, message)
+
 
 import os
 if __name__ == "__main__":
