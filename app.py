@@ -43,7 +43,7 @@ def handle_message(event):
         output_text = '409410510 游家碩\n409411021 馬儒彬\n409411054 周庭蔚'
         message = TextSendMessage(text=output_text)
         line_bot_api.reply_message(event.reply_token, message)
-    else if'科目內容'in text:
+    elif'科目內容'in text:
         output_text ='金融科技理論與實務-產業應用與趨勢'
         message = TextSendMessage(text=output_text)
         line_bot_api.reply_message(event.reply_token, message)
